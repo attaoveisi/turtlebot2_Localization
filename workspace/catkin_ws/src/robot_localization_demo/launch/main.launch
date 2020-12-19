@@ -2,24 +2,11 @@
   
   <!--Robot Pose EKF Package -->
   <!-- The path_ekf_plotter node -->	
-  <node name="path_ekf_plotter" type="path_ekf_plotter.py" pkg="odom_to_trajectory">
-  </node>
+  <!-- <node name="path_ekf_plotter" type="path_ekf_plotter.py" pkg="odom_to_trajectory">  -->
+  <!-- </node> -->
   
   <!-- The path_odom_plotter node -->
-  <node name="path_odom_plotter" type="path_odom_plotter.py" pkg="odom_to_trajectory">
-  
-  <!--RobotPose EKF package-->
-  </node>
-  <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
-  <param name="output_frame" value="odom_combined"/>
-  <param name="base_footprint_frame" value="base_footprint"/>
-  <param name="freq" value="30.0"/>
-  <param name="sensor_timeout" value="1.0"/>  
-  <param name="odom_used" value="true"/>
-  <param name="imu_used" value="true"/>
-  <param name="vo_used" value="false"/>
-  <remap from="imu_data" to="/mobile_base/sensors/imu_data" />	
-  </node>
+  <!-- <node name="path_odom_plotter" type="path_odom_plotter.py" pkg="odom_to_trajectory"> -->
 
   <!-- TurleBot Gazzebo-->
   <arg name="world_file"  default="$(env TURTLEBOT_GAZEBO_WORLD_FILE)"/>
@@ -59,7 +46,7 @@
   </node>
 
   <!--RVIZ-->
-  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/EKFLab.rviz"/>
+  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/EKFLab.rviz"/> -->
   <!--Use this insted if you are cloning the whole repo in your src-->
   <!--<node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/RoboND-EKFLab/EKFLab.rviz"/>-->
 
