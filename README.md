@@ -6,6 +6,8 @@ This is the localization of the Turtlebo2 by fusing imu, and odometry data
 this package is used for its Gazebo launchers and worlds for TurtleBot simulation, see [link](http://wiki.ros.org/turtlebot_gazebo)
 The turtlebot2 gazebo package has its rotary encoders and imu data published under these topics:
 
+[!til](https://media.giphy.com/media/Q9rOmYzy2MmDbMu7pF/giphy.gif)
+
 `/mobile_base/sensors/imu_data` as `sensor_msgs/Imu`:  
 
 ```
