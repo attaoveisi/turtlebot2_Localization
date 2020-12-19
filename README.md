@@ -70,6 +70,8 @@ In order to map the topic one can do: `<remap from="foo" to="/mobile_base/sensor
 
 ## Convert estimated odometry to trajectory
 
-For this purposes, the [link]() ROS package is used
+For this purposes, the [link](https://github.com/turtlebot/turtlebot) ROS package is used with the following logic:
 
-# Moving with 
+![image](https://user-images.githubusercontent.com/17289954/102691785-569cee80-420f-11eb-9d11-f43919fdaf11.png)
+
+# Moving with teleopt package
