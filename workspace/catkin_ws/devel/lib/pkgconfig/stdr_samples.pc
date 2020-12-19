@@ -1,0 +1,8 @@
+prefix=/home/atta/turtlebot2_Localization/workspace/catkin_ws/devel
+
+Name: stdr_samples
+Description: Description of stdr_samples
+Version: 0.3.2
+Cflags: -I/home/atta/turtlebot2_Localization/workspace/catkin_ws/src/stdr_simulator/stdr_samples/include
+Libs: -L${prefix}/lib 
+Requires: roslib roscpp tf stdr_msgs geometry_msgs sensor_msgs nav_msgs

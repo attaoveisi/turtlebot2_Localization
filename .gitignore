@@ -3,6 +3,8 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+[bB][uU][iI][lL][dD]/
+.idea
 
 # Other files and folders
 .settings/

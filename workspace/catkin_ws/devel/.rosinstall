@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/atta/turtlebot2_Localization/workspace/catkin_ws/devel/setup.sh

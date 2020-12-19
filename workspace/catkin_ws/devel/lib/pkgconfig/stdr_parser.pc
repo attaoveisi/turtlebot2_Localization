@@ -1,0 +1,8 @@
+prefix=/home/atta/turtlebot2_Localization/workspace/catkin_ws/devel
+
+Name: stdr_parser
+Description: Description of stdr_parser
+Version: 0.3.2
+Cflags: -I/home/atta/turtlebot2_Localization/workspace/catkin_ws/src/stdr_simulator/stdr_parser/include -I/usr/include
+Libs: -L${prefix}/lib -lstdr_parser /usr/lib/x86_64-linux-gnu/libtinyxml.so
+Requires: roscpp roslib stdr_msgs
