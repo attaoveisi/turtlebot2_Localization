@@ -1,8 +1,0 @@
-prefix=/home/atta/turtlebot2_Localization/workspace/catkin_ws/devel
-
-Name: joy
-Description: Description of joy
-Version: 1.15.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: sensor_msgs

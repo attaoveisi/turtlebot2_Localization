@@ -1,8 +1,0 @@
-prefix=/home/atta/turtlebot2_Localization/workspace/catkin_ws/devel
-
-Name: stdr_robot
-Description: Description of stdr_robot
-Version: 0.3.2
-Cflags: -I/home/atta/turtlebot2_Localization/workspace/catkin_ws/src/stdr_simulator/stdr_robot/include
-Libs: -L${prefix}/lib -lstdr_handle_robot
-Requires: roscpp nodelet actionlib tf stdr_msgs stdr_parser geometry_msgs sensor_msgs nav_msgs

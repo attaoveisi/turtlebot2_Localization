@@ -1,8 +1,0 @@
-prefix=/home/atta/turtlebot2_Localization/workspace/catkin_ws/devel
-
-Name: kobuki_bumper2pc
-Description: Description of kobuki_bumper2pc
-Version: 0.7.6
-Cflags: -I/home/atta/turtlebot2_Localization/workspace/catkin_ws/src/kobuki/kobuki_bumper2pc/include
-Libs: -L${prefix}/lib -lkobuki_bumper2pc_nodelet
-Requires: roscpp nodelet pluginlib sensor_msgs kobuki_msgs
