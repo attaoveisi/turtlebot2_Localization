@@ -45,8 +45,15 @@
     <remap from="scan" to="/scan"/>
   </node>
 
+  <!--Robot-Localization-->
+  <rosparam command="load" file="$(find robot_localization)/params/ekf_imu_odometry.yaml" />
+
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_odom" clear_params="true">
+    <remap from="odometry/filtered" to="robot_pose_ekf/odom_combined"/>
+  </node>
+
   <!--RVIZ-->
-  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/EKFLab.rviz"/> -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/EKFLab.rviz"/>
   <!--Use this insted if you are cloning the whole repo in your src-->
   <!--<node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/RoboND-EKFLab/EKFLab.rviz"/>-->
 
@@ -56,6 +63,8 @@
     <param name="scale_angular" value="1.5" type="double"/>
     <remap from="turtlebot_teleop_keyboard/cmd_vel" to="cmd_vel_mux/input/teleop"/>
   </node>
+
+
 
 
 </launch>
