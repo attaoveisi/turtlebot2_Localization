@@ -20,11 +20,11 @@ def callback(data):
         global yAnt
         global cont
 
-    #Is created the pose msg, its necessary do it each time because Python manages objects by reference, 
+        #Is created the pose msg, its necessary do it each time because Python manages objects by reference,
         #and does not make deep copies unless explicitly asked to do so.
-        pose = PoseStamped()    
+        pose = PoseStamped()
 
-    #Set a atributes of the msg
+        #Set a atributes of the msg
         pose.header.frame_id = "odom"
         pose.pose.position.x = float(data.pose.pose.position.x)
         pose.pose.position.y = float(data.pose.pose.position.y)
@@ -33,7 +33,7 @@ def callback(data):
         pose.pose.orientation.z = float(data.pose.pose.orientation.z)
         pose.pose.orientation.w = float(data.pose.pose.orientation.w)
 
-    #To avoid repeating the values, it is found that the received values are differents
+        #To avoid repeating the values, it is found that the received values are differents
         if (xAnt != pose.pose.position.x and yAnt != pose.pose.position.y):
                 #Set a atributes of the msg
                 pose.header.seq = path.header.seq + 1
@@ -47,11 +47,11 @@ def callback(data):
 
         rospy.loginfo("Valor del contador: %i" % cont)
         if cont>max_append:
-        	path.poses.pop(0)
+                path.poses.pop(0)
 
         pub.publish(path)
 
-    #Save the last position
+        #Save the last position
         xAnt=pose.pose.orientation.x
         yAnt=pose.pose.position.y
         return path
@@ -78,25 +78,25 @@ if __name__ == '__main__':
         #max size of array pose msg from the path
         if not rospy.has_param("~max_list_append"):
                 rospy.logwarn('The parameter max_list_append dont exists')
-        max_append = rospy.set_param("~max_list_append",1000) 
-        max_append = 1000
+        max_append = rospy.set_param("~max_list_append",10000)
+        max_append = 10000
         if not (max_append > 0):
                 rospy.logwarn('The parameter max_list_append not is correct')
                 sys.exit()
-        pub = rospy.Publisher('/odompath', Path, queue_size=1)
+        pub = rospy.Publisher('/odompath', Path, queue_size=10)
 
 
-        path = Path() #creamos el mensaje path de tipo path 
+        path = Path() #creamos el mensaje path de tipo path
         msg = Odometry()
 
         #Subscription to the topic
-        msg = rospy.Subscriber('/odom', Odometry, callback) 
+        msg = rospy.Subscriber('/odom', Odometry, callback)
 
         rate = rospy.Rate(30) # 30hz
 
 try:
-	while not rospy.is_shutdown():
-        	#rospy.spin()
-        	rate.sleep()
+        while not rospy.is_shutdown():
+                #rospy.spin()
+                rate.sleep()
 except rospy.ROSInterruptException:
-	pass
+        pass

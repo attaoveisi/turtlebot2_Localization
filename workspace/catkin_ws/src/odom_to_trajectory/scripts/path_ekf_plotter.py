@@ -22,7 +22,7 @@ def callback(data):
 
     #Is created the pose msg, its necessary do it each time because Python manages objects by reference, 
         #and does not make deep copies unless explicitly asked to do so.
-        pose = PoseStamped()    
+        pose = PoseStamped()
 
     #Set a atributes of the msg
         pose.header.frame_id = "odom"
@@ -78,19 +78,19 @@ if __name__ == '__main__':
         #max size of array pose msg from the path
         if not rospy.has_param("~max_list_append"):
                 rospy.logwarn('The parameter max_list_append dont exists')
-        max_append = rospy.set_param("~max_list_append",1000) 
-        max_append = 1000
+        max_append = rospy.set_param("~max_list_append",10000)
+        max_append = 10000
         if not (max_append > 0):
                 rospy.logwarn('The parameter max_list_append not is correct')
                 sys.exit()
-        pub = rospy.Publisher('/ekfpath', Path, queue_size=1)
+        pub = rospy.Publisher('/ekfpath', Path, queue_size=10)
 
 
-        path = Path() #creamos el mensaje path de tipo path 
+        path = Path() #creamos el mensaje path de tipo path
         msg = Odometry()
 
         #Subscription to the topic
-        msg = rospy.Subscriber('/robot_pose_ekf/odom_combined', PoseWithCovarianceStamped, callback) 
+        msg = rospy.Subscriber('/robot_pose_ekf/odom_combined', Odometry, callback)
 
         rate = rospy.Rate(30) # 30hz
 

@@ -2,11 +2,10 @@
   
   <!--Robot Pose EKF Package -->
   <!-- The path_ekf_plotter node -->	
-  <!-- <node name="path_ekf_plotter" type="path_ekf_plotter.py" pkg="odom_to_trajectory">  -->
-  <!-- </node> -->
-  
+
   <!-- The path_odom_plotter node -->
-  <!-- <node name="path_odom_plotter" type="path_odom_plotter.py" pkg="odom_to_trajectory"> -->
+  <node name="path_odom_plotter" type="path_odom_plotter.py" pkg="odom_to_trajectory">
+  </node>
 
   <!-- TurleBot Gazzebo-->
   <arg name="world_file"  default="$(env TURTLEBOT_GAZEBO_WORLD_FILE)"/>
@@ -53,7 +52,7 @@
   </node>
 
   <!--RVIZ-->
-  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/EKFLab.rviz"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/atta/turtlebot2_Localization/workspace/catkin_ws/src/robot_localization_demo/Fusion.rviz"/>
   <!--Use this insted if you are cloning the whole repo in your src-->
   <!--<node pkg="rviz" type="rviz" name="rviz" args="-d /home/workspace/catkin_ws/src/RoboND-EKFLab/EKFLab.rviz"/>-->
 

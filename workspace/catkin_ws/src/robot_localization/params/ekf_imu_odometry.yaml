@@ -1,11 +1,11 @@
 # For parameter descriptions, please refer to the template parameter files for each node.
 
 ekf_se_odom:
-  frequency: 20
+  frequency: 30
   sensor_timeout: 0.1
   two_d_mode: false
-  transform_time_offset: 0.0
-  transform_timeout: 0.0
+  transform_time_offset: 0.1
+  transform_timeout: 0.2
   print_diagnostics: true
   debug: false
 
