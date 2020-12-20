@@ -8,6 +8,13 @@ Here, the IMU data and Odometry data from robot base (wheel) are fused together 
 
 For moving the robot around, the robot_teleop package is used which allows the user to control the robot manually in the scene.
 
+In order to run the package simply:
+```sh
+./runPackage.sh
+```
+
+after cloning the package and installing the ROS dependencies.
+
 ## turtlebot_gazebo package 
 
 this package is used for its Gazebo launchers and worlds for TurtleBot simulation, see [link](http://wiki.ros.org/turtlebot_gazebo)
