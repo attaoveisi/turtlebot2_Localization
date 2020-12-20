@@ -6,6 +6,8 @@ The gif below shows the integration of robot_localization package with odom_to_g
 
 Here, the IMU data and Odometry data from robot base (wheel) are fused together to generate `/odom_combined` topic. The Odometry message is then converted to a path.  
 
+For moving the robot around, the robot_teleop package is used which allows the user to control the robot manually in the scene.
+
 ## turtlebot_gazebo package 
 
 this package is used for its Gazebo launchers and worlds for TurtleBot simulation, see [link](http://wiki.ros.org/turtlebot_gazebo)
@@ -81,4 +83,8 @@ For this purposes, the [link](https://github.com/turtlebot/turtlebot) ROS packag
 
 ![image](https://user-images.githubusercontent.com/17289954/102691785-569cee80-420f-11eb-9d11-f43919fdaf11.png)
 
-# Moving with teleopt package
+## Moving with teleop package
+
+Interested reader may refer to [link](https://github.com/turtlebot/turtlebot) for further info regarding Turtlebot2_teleop package:
+
+`roslaunch turtlebot_teleop keyboard_teleop.launch`
