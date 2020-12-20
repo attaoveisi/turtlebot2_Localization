@@ -1,5 +1,10 @@
 # turtlebot2_Localization
 This is the localization of the Turtlebo2 by fusing imu, and odometry data
+The gif below shows the integration of robot_localization package with odom_to_geometry modules for the turtlebot2.
+
+![til](https://media.giphy.com/media/rXt0irARewSuFzv7sJ/giphy.gif)
+
+Here, the IMU data and Odometry data from robot base (wheel) are fused together to generate `/odom_combined` topic. The Odometry message is then converted to a path.  
 
 ## turtlebot_gazebo package 
 
